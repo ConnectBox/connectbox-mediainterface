@@ -13,7 +13,7 @@ MMI is meant to be used with the [MediaBuilder customized](https://github.com/RT
 
 In addition, the lazyLoader.py script in this repo can pull content provided as argument (example: `python /usr/local/connectbox/bin/lazyLoader.py https://yourmediabuilder/file.zip`) and the lazyLoader will unpack the zip, install it to the correct location (customize the location in the script) and load any needed media elements (typically from "slim" package created from MediaBuilder).
 
-MMI can also be loaded using a script in the repo called mmiloader.py that will convert from a source directory (you can set the source and destination directories in the first few lines of the script).  Example on connectbox/thewell: `python /usr/local/connectbox/bin/mmiloader.py` and it will create a schema directory in the content directory of the MMI.
+MMI can also be loaded using a script in the repo called mmiloader.py that will convert from a source directory (you can set the source and destination directories in the first few lines of the script).  Example on a ConnectBox: `python /usr/local/connectbox/bin/mmiloader.py` and it will create a schema directory in the content directory of the MMI.
 
 Default content is at src/assets/content and templates used by mmiloader.py are located at src/assets/templates.  The footer.html file can be customized.
 

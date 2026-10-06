@@ -11,7 +11,7 @@ import sys
 import time
 from urllib.parse import unquote
 
-# Defaults for Connectbox / TheWell
+# Defaults for Connectbox
 contentDirectory = "/var/www/enhanced/content/www/assets/content/"
 
 failedItemCount = 0;
