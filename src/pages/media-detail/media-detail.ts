@@ -141,7 +141,9 @@ export class MediaDetailPage {
     let items: Array<AvPlayerItem|ViewerItem> = null;
     if ((current.mediaType === 'video') || (current.mediaType === 'audio')) {
       items = <Array<AvPlayerItem>> this.media.episodes.map((episode: Episode) => {
-        const playFirst = (episode.title === current.title);
+        // Match on slug, not title: a .doc and a .pdf with the same name share a
+        // title, and the first of them (often the .doc) would be opened instead.
+        const playFirst = (episode.slug === current.slug);
         return {
           url: episode.filePath,
           playFirst: playFirst,
@@ -153,7 +155,9 @@ export class MediaDetailPage {
       });
     } else {
       items = <Array<ViewerItem>> this.media.episodes.map((episode: Episode) => {
-        const playFirst = (episode.title === current.title);
+        // Match on slug, not title: a .doc and a .pdf with the same name share a
+        // title, and the first of them (often the .doc) would be opened instead.
+        const playFirst = (episode.slug === current.slug);
         return {
           downloadPath: episode.downloadPath,
           filePath: episode.filePath,
